@@ -1,0 +1,20 @@
+#root {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 25px;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (max-width: 1440px) {
+   #root {
+      padding: 0 4rem;
+    }
+}
+
+@media (max-width: 425px) {
+   #root {
+      padding: 0 1rem;
+    }
+}
+

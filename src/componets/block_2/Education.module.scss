@@ -1,0 +1,48 @@
+@use "../ui/MainBlock.module.scss";
+
+.education{
+
+   &__block{
+      margin-top: 10px;
+   }
+
+   .block{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   
+      &__list{}
+   
+      .list{
+         width: 50%;
+         display: block;
+         text-align: start;
+         padding: 0;
+   
+         &__item{
+            font-size: 20px;
+            font-weight: 500;
+         }
+      }
+   
+      &__gerb{
+         width: 220px;
+         height: 200px;
+         display: block;
+      }
+   }
+}
+
+@media (max-width: 800px) {
+   .education{
+
+      .block{
+         flex-direction: column;
+         
+         .list{
+            width: 100%;
+            text-align: center;
+         }
+      }
+   }
+}

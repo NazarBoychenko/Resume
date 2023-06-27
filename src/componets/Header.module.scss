@@ -1,0 +1,68 @@
+.header {
+   width: inherit;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 30px;
+   border-bottom: 2px solid rgba(136, 55, 55, 0.8);
+
+   &__logo {
+      width: 70px;
+      height: 70px;
+   }
+
+   &__menu {
+   }
+
+   .menu {
+      min-width: 45%;
+      height: inherit;
+      flex-wrap: wrap;
+
+      &__item {
+      }
+   }
+
+   &__plusMenu {
+      display: none;
+   }
+
+   &__rotateOut {
+      transform: rotate(0deg);
+      transition: all 1s;
+   }
+
+   &__rotateIn {
+      transform: rotate(45deg);
+      transition: all 1s;
+   }
+
+   @media (max-width: 505px) {
+      .menu {
+         width: 170px;
+         height: 180px;
+         display: block;
+         padding: 0;
+         position: absolute;
+         top: 60px;
+         z-index: 5;
+         background-color: rgb(247, 191, 59, 0.7);
+         border-radius: 10px 0 0 10px;
+      }
+
+      &__showMenu {
+         right: -220px;
+         transition: right 1s;
+      }
+
+      &__closeMenu {
+         right: 0;
+         transition: right 1s;
+      }
+
+      &__plusMenu {
+         display: block;
+      }
+   }
+}

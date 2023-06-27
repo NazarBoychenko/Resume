@@ -1,0 +1,12 @@
+@use "../ui/MainBlock.module.scss";
+
+.achievements{
+   display: flex;
+   align-items: center;
+
+   &__text{
+      font-size: 25px;
+      font-weight: 500;
+      text-align: justify;
+   }
+}
