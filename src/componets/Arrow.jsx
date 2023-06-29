@@ -25,7 +25,7 @@ export function Arrow(props) {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      fade: true,
+      fade: false,
       swipe: true,
       adaptiveHeight: true,
    };

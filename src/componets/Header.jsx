@@ -6,11 +6,33 @@ import icon from "../assets/icon";
 
 import { ButtonOfHeader } from "./ui/ButtonOfHeader";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export function Header(props) {
+   const menuRef = useRef();
+
    const [move, setMove] = useState(false);
    const [chenge, setChenge] = useState(false);
+
+   useEffect(() => {
+      if (window.screen.availWidth <= 505) {
+         if (move) {
+            menuRef.current.style.display = "block";
+            setTimeout(() => {
+               menuRef.current.style.right = "0";
+            }, 100)
+         } else if (!move) {
+            menuRef.current.style.right = "-220px";
+            setTimeout(() => {
+               menuRef.current.style.display = "none";
+            }, 1100)
+         } else {
+            return;
+         }
+      } else {
+         return;
+      }
+   }, [move]);
 
    const onSend = (number) => {
       setChenge(!chenge);
@@ -22,7 +44,7 @@ export function Header(props) {
          <img src={Logo} alt="Logo" className={styles.header__logo}
             onClick={() => onSend(0)}
          />
-         <ul className={`${styles.header__menu} ${styles.menu} ${move ? styles.header__closeMenu : styles.header__showMenu}`}>
+         <ul className={`${styles.header__menu} ${styles.menu}`} ref={menuRef}>
             <li className={styles.menu__item}
                onClick={() => onSend(0)}><ButtonOfHeader>Introduction</ButtonOfHeader></li>
             <li className={styles.menu__item}

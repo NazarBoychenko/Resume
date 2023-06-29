@@ -42,23 +42,13 @@
       .menu {
          width: 170px;
          height: 180px;
-         display: block;
          padding: 0;
          position: absolute;
          top: 60px;
          z-index: 5;
          background-color: rgb(247, 191, 59, 0.7);
          border-radius: 10px 0 0 10px;
-      }
-
-      &__showMenu {
-         right: -220px;
-         transition: right 1s;
-      }
-
-      &__closeMenu {
-         right: 0;
-         transition: right 1s;
+         transition: right 1s linear;
       }
 
       &__plusMenu {

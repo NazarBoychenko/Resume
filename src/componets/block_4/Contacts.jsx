@@ -3,22 +3,27 @@ import styles from "./Contacts.module.scss";
 import icon from "../../assets/icon";
 
 import { useState } from "react";
+import { createPortal } from "react-dom";
+
+import { BlockLinkCopy } from "../ui/BlockLinkCopy";
 
 export function Contacts() {
    const [show, setShow] = useState(false);
 
    const onCopy = (links) => {
-      navigator.clipboard.writeText(links);
+      navigator.clipboard.writeText(links)
       setShow(true);
       setTimeout(() => {
          setShow(false);
-      }, 3000);
+      }, 5000);
    }
 
    return (
       <div className={`${styles.contacts} ${styles.mainBlock}`}>
-         <div className={`${styles.contacts__dialog} ${show ? styles.contacts__open : styles.contacts__close}`}
-         >The link has been successfully copied!</div>
+         {createPortal(
+            <BlockLinkCopy change={show} />,
+            document.querySelector("body")
+         )}
          <div className={`${styles.contacts__block} ${styles.block}`}
             style={{ backgroundColor: "rgb(181, 181, 181, 0.5)" }}
             onClick={() => { onCopy("https://github.com/NazarBoychenko") }}

@@ -1,40 +1,39 @@
 @use "../ui/MainBlock.module.scss";
 
-.introduction{
+.introduction {
    display: flex;
    justify-content: space-between;
    align-items: center;
 
-   .introduction__description{
-
+   .introduction__description {
    }
-   
-   .description{
+
+   .description {
       text-align: start;
-   
-      &__profession{
+
+      &__profession {
          font-size: 2.6em;
          color: #883737;
       }
-   
-      &__skillsText{
+
+      &__skillsText {
          font-size: 1.8em;
          color: #883737;
       }
-   
-      &__skills{
+
+      &__skills {
          padding: 0;
       }
-   
-      .skills{
+
+      .skills {
          width: 100%;
          height: inherit;
          display: flex;
          justify-content: start;
          align-items: start;
          flex-wrap: wrap;
-   
-         &__items{
+
+         &__items {
             padding: 5px 10px;
             margin: 5px 10px;
             border-radius: 15px;
@@ -42,32 +41,29 @@
             font-weight: 500;
          }
       }
-   
    }
-   
-   .introduction__photo{
-   
+
+   .introduction__photo {
    }
-   
-   .introduction__face{
+
+   .introduction__face {
       border-radius: 100%;
       width: 21em;
       height: 21em;
    }
-   
+
    @media (max-width: 540px) {
-      .description{
-   
-         &__profession{
+      .description {
+         &__profession {
             font-size: 1.6em;
          }
-   
-         &__skillsText{
+
+         &__skillsText {
             font-size: 1.6em;
          }
       }
-   
-      .introduction__face{
+
+      .introduction__face {
          width: 240px;
          height: 240px;
       }
@@ -75,15 +71,14 @@
 }
 
 @media (max-width: 1000px) {
-   .introduction{
+   .introduction {
       justify-content: center;
       flex-wrap: wrap;
    }
 }
 
 @media (max-width: 610px) {
-   .mainBlock{
-      margin: 30px 0 50px 0;
+   .mainBlock {
       padding: 10px 20px;
    }
 }
